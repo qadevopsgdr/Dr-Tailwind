@@ -67,7 +67,7 @@ Browser
 
 ![image](https://github.com/user-attachments/assets/d11f159b-3bfa-4def-b968-622b4f359482)
 
-Steps to deploy the application:
+**Steps to deploy the application (All commands are in _Italic font_):**
 
 1. SSH to the machine (I am using AWS EC2 Instance and Amazon-provided Ubuntu 24.04 LTS AMI). Install docker and docker compose. If you need help, refer to:
 
@@ -75,24 +75,28 @@ Docker Installation: https://youtu.be/onF8QS9DMQA
 
 Docker compose installation: https://youtu.be/JAzg2TjuyRI
 
-2. mkdir project
+2. _mkdir project_
 
 3. sudo apt install git -y # For ubuntu and sudo yum install git -y # For rpm-based OS like RHEL, CentOS Fedora etc
 
-4. cd project
+4. _cd project_
 
 5. Setup SSH-Based authentication to GitHub (optional)
 
-6. For SSH-Based authentication: git clone -b react-tailwind-website git@github.com:bhavukm/3tier-react-tailwind.git
+6. For SSH-Based authentication: _git clone -b react-tailwind-website git@github.com:bhavukm/3tier-react-tailwind.git_
 
-   For HTTP-Based authentication: git clone -b react-tailwind-website https://github.com/bhavukm/3tier-react-tailwind.git
+   For HTTP-Based authentication: _git clone -b react-tailwind-website https://github.com/bhavukm/3tier-react-tailwind.git_
 
-7. cd 3tier-react-tailwind
+7. _cd 3tier-react-tailwind_
 
-8. docker compose up -d
+8. _docker compose up -d_
 
-9. docker compose ps
+9. _docker compose ps_
   
-10. docker ps
+10. _docker ps_
 
 11. Open a browser and access the application: http://server-ip:80
+
+12. _docker images_
+  
+13. To destroy all resources created by docker compose: _docker compose down --rmi all -v_
