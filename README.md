@@ -8,9 +8,9 @@ Tier 2: Backend: The brain of the app — handles requests and talks to the data
 
 Tier 3: Database: Stores actual data like user info, products, etc.
 
-**The Application Architecture Diagram:**
+**The Application Architecture Diagram**
 
-![App Arch Diagram](https://github.com/user-attachments/assets/abbd9a5f-f6be-4a53-be8f-b7767e0cad0f)
+![App Arch Diagram](https://github.com/user-attachments/assets/42744ad9-8a91-418f-bc1d-c7ac665ecaf1)
 
 **Components in Our Stack:**
 
