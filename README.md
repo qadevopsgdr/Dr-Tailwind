@@ -49,7 +49,7 @@ Browser
 
 **Why are we using Docker Compose?**
 
-1. One command to spin everything up: docker-compose up
+1. One command to spin everything up: docker-compose up -d
 
 2. No dependency conflicts — everything runs in containers
 
