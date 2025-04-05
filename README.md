@@ -67,4 +67,32 @@ Browser
 
 ![image](https://github.com/user-attachments/assets/d11f159b-3bfa-4def-b968-622b4f359482)
 
+Steps to deploy the application:
 
+1. SSH to the machine (I am using AWS EC2 Instance and Amazon-provided Ubuntu 24.04 LTS AMI). Install docker and docker compose. If you need help, refer to:
+
+Docker Installation: https://youtu.be/onF8QS9DMQA
+
+Docker compose installation: https://youtu.be/JAzg2TjuyRI
+
+2. mkdir project
+
+3. sudo apt install git -y # For ubuntu and sudo yum install git -y # For rpm-based OS like RHEL, CentOS Fedora etc
+
+4. cd project
+
+5. Setup SSH-Based authentication to GitHub (optional)
+
+6. For SSH-Based authentication: git clone -b react-tailwind-website git@github.com:bhavukm/3tier-react-tailwind.git
+
+   For HTTP-Based authentication: git clone -b react-tailwind-website https://github.com/bhavukm/3tier-react-tailwind.git
+
+7. cd 3tier-react-tailwind
+
+8. docker compose up -d
+
+9. docker compose ps
+  
+10. docker ps
+
+11. Open a browser and access the application: http://server-ip:80
