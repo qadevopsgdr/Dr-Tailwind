@@ -2,11 +2,11 @@
  
 In this project, I am deploying a 3 Tier container application with Docker Compose. The application will have the following:
 
-Tier 1: Frontend: What users see in the browser (like a website).
+**Tier 1: Frontend:** What users see in the browser (like a website).
 
-Tier 2: Backend: The brain of the app — handles requests and talks to the database.
+**Tier 2: Backend:** The brain of the app — handles requests and talks to the database.
 
-Tier 3: Database: Stores actual data like user info, products, etc.
+**Tier 3: Database** Stores actual data like user info, products, etc.
 
 **The Application Architecture Diagram**
 
@@ -22,17 +22,17 @@ All components are in Docker containers and connected via Docker Compose.
 
 **Here's what happens behind the scenes:**
 
-👩 User opens the app in a browser (http://ip-of-the-server:80)
+A. User opens the app in a browser (http://ip-of-the-server:80)
 
-🧑‍🎨 Frontend (React) is served by Nginx (a lightweight web server)
+B. Frontend (React) is served by Nginx (a lightweight web server)
 
-📬 When the user does something (like clicking a button), the frontend makes an HTTP request to the backend (e.g., GET /api/users)
+C. When the user does something (like clicking a button), the frontend makes an HTTP request to the backend (e.g., GET /api/users)
 
-🧠 Backend (Node.js) receives the request, processes it, and talks to the PostgreSQL database
+D. Backend (Node.js) receives the request, processes it, and talks to the PostgreSQL database
 
-💾 The database sends back the requested data
+E. The database sends back the requested data
 
-🎨 Backend sends that data to the Frontend, which displays it to the user
+F. Backend sends that data to the Frontend, which displays it to the user
 
 They all run in separate containers but are connected via a shared Docker network, so they can "talk" to each other using service names (e.g., backend, db).
 
