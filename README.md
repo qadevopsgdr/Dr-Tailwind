@@ -16,7 +16,7 @@ Tier 3: Database: Stores actual data like user info, products, etc.
 
 ![image](https://github.com/user-attachments/assets/ee808b97-a2c1-4f1c-a40d-9f6b3ad478cf)
 
-How Do The Different Containers Talk to Each Other?
+**How Do The Different Containers Talk to Each Other?**
 
 All components are in Docker containers and connected via Docker Compose.
 
