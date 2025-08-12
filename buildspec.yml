@@ -1,0 +1,38 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      nodejs: 18
+    commands:
+      - echo Installing dependencies...
+      - npm ci
+
+  pre_build:
+    commands:
+      - echo Running pre-build checks...
+      # Uncomment if you have tests
+      # - npm test
+
+  build:
+    backend: 
+      - build the backend code 
+      - cd backend 
+      - Docker image build -t backend:latest .
+    frontend:
+      - build the backend code 
+      - cd backend 
+      - Docker image build -t backend:latest .
+
+  post_build:
+    commands:
+      - echo Build completed on `date`
+      - docker tag backend:latest <557690603016.dkr.ecr.ap-south-1.amazonaws.com/tailwind>
+      - docker tag frontend:latest <557690603016.dkr.ecr.ap-south-1.amazonaws.com/tailwind>
+      - docker push 
+      - docker push 
+
+artifacts:
+  files:
+    - '**/*'
+  base-directory: build_artifacts
